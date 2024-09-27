@@ -3,7 +3,7 @@
 # output.
 
 def calcRectArea(length, width):
-    print(length * width)
+    return length * width
 
-calcRectArea(5, 6)
-calcRectArea(6.9, 4.2)
+print(calcRectArea(5, 6))
+print(calcRectArea(6.9, 4.2))
