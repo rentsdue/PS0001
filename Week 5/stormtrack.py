@@ -1,5 +1,5 @@
 import numpy as np # imports the numpy module (very import package for scientific computing with Python)
-my_array = np.loadtxt("stormtrack.txt") # loads the data into the array my array
+my_array = np.loadtxt("Week 5/Text Files/stormtrack.txt")# loads the data into the array my array
 winds = my_array [:,0] # variable winds is a sequence that contains the 1st column of the data
 visibs = my_array [:,1] # variable visibs is a sequence that contains the 2nd column of the data
 

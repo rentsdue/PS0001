@@ -1,6 +1,6 @@
 import numpy as np
 
-myArray = np.loadtxt("fertility.txt")
+myArray = np.loadtxt("Week 5/Text Files/fertility.txt")
 year = 1960
 
 #Increasing years pairs:
