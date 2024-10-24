@@ -4,4 +4,4 @@ def sumOfFraction(number):
         sum += 1 / (i * (i + 1))
     return sum
 
-print(sumOfFraction(2))
+print(sumOfFraction(49))
