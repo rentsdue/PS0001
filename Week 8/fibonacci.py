@@ -24,9 +24,6 @@ list1 = []
 for i in range(0, 12):
     list1.append(my_rfibo(i))
 
-print(list1)
-
-
 # 5. The computation of Fibonacci numbers can also be accomplished by non-recursive method. We can
 # implement an iteration method to calculate Fibonacci numbers, because we know both the index number 𝑛
 # and the formula. The procedure is below:
@@ -41,27 +38,30 @@ def my_ifibo(n):
         return 0
     elif n == 1:
         return 1
-    else:
-        a, b = 0, 1
-        for i in range(2, n + 1):
-            a, b = b, a + b
-        return b
+    
+    memo = [0] * (n + 1)
+    memo[0] = 0
+    memo[1] = 1
+
+    for i in range(2, len(memo)):
+        memo[i] = memo[i - 1] + memo[i - 2]
+    return memo[n]
     
 list2 = []
 for i in range(0, 12):
     list2.append(my_ifibo(i))
 
-print(list2)
-
 # Measure CPU time
 startTime1 = time.process_time()  
-result1 = my_rfibo(10) 
+result1 = my_ifibo(400) 
+print(result1)
 endTime1 = time.process_time()   
 cpuTime1 = endTime1 - startTime1  
 print(cpuTime1)
 
 startTime2 = time.process_time()  
-result2 = my_ifibo(10)             
+result2 = my_rfibo(400)
+print(result2)             
 endTime2 = time.process_time()   
 cpuTime2 = endTime2 - startTime2  
 print(cpuTime2)
